@@ -2,7 +2,11 @@
 
 namespace PaymentApplication
 {
-    public class CreditCard : Attribute
+    /// <summary>
+    /// CreditCard class with validation on properties;
+    /// Would use this to fail-fast when attepting to create a non-valid CreditCard instance
+    /// </summary>
+    public class ValidCreditCard
     {
         private string creditCardNumber;
         private string cardHolder;
@@ -31,7 +35,7 @@ namespace PaymentApplication
             {
                 if (string.IsNullOrEmpty(value))
                     throw new ArgumentException("Card holder value can not be blank");
-                creditCardNumber = value;
+                cardHolder = value;
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace PaymentApplication
 {
-    internal class PaymentValidator
+    internal class Validator<T>
     {
     }
 }
